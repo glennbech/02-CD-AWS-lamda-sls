@@ -7,23 +7,6 @@ ladet.
 * Deployment og bygg skal gjøres med verktøyet "AWS SAM", både i pipeline med GitHub actions, men også for fra et Cloud9
 miljø.
 
-## Trouble-shooting 
-
-Du kan oppleve at du går tom for disk i cloud9 miljøet når du kjører SAM operasjoner. Du må da fjerne docker images.  
-
-```shell
-docker images ls
-```
-
-Se etter Image ID, og slett med 
-
-```shell
-docker image rm  <Image ID>
-```
-
-Slett gjerne all images, og forsøk å kjøre SAM kommandoen på nytt 
-
-
 ## Beskrivelse 
 
 Denne øvingen bruker fire AWS tjenestester 
@@ -51,7 +34,7 @@ Du må start med å lage en fork av dette repoet til din egen GitHub konto.
 
 ### Lag et Access Token for GitHub
 
-* Når du skal autentisere deg mot din GitHub konto fra Cloud 9 trenger du et access token.  Gå til  https://github.com/settings/tokens og lag et nytt.
+* Når du skal autentisere deg mot din GitHub konto fra Cloud 9 trenger du et access token.  Gå til  https://github.com/settings/tokens og lag et nytt "Classic" token
 * NB. Ta vare på tokenet et sted, du trenger dette senere når du skal gjøre ```git push```
 
 ![Alt text](img/generate.png  "a title")
